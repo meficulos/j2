@@ -14,13 +14,16 @@
         this.className = '';
         this.htmlCode = '';
     }
+	
     Container.prototype.remove = function () {
         var menuElem = document.getElementById(this.id);
         menuElem.parentNode.removeChild(menuElem);
     }
+	
     Container.prototype.render = function () {
         return this.htmlCode;
     }
+	
     // Конструктор Menu
     function Menu(myId, myClass, myItems) {
         Container.call(this);
@@ -28,8 +31,10 @@
         this.className = myClass;
         this.items = myItems;
     }
+	
     Menu.prototype = Object.create(Container.prototype);
     Menu.prototype.constructor = Menu;
+	
     Menu.prototype.render = function () {
         var result = '<ul class=""' + this.className + ' "id="' + this.id + '">';
         for (var item in this.items) {
@@ -40,6 +45,7 @@
         result += '</ul>';
         return result;
     }
+	
     // Класс элемента меню
     function MenuItem(myHref, myName, myId, myClass, myItems) {
         Menu.call(this, myId, myClass, myItems);
@@ -47,8 +53,10 @@
         this.href = myHref;
         this.name = myName;
     }
+	
     MenuItem.prototype = Object.create(Menu.prototype);
     MenuItem.prototype.constructor = MenuItem;
+	
     MenuItem.prototype.render = function () {
         var result = '<li class=""' + this.className + '"><a href="' + this.href + '">' + this.name + '</a>';
         result += Menu.prototype.render.call(this);
