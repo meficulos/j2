@@ -1,0 +1,16 @@
+[
+	{
+		"thumbnail": "img/thumbnail1.jpg",
+		"original": "img/original1.jpg"
+	},
+	
+	{
+		"thumbnail": "img/thumbnail2.jpg",
+		"original": "img/original2.jpg"
+	},
+	
+	{
+		"thumbnail": "img/thumbnail3.jpg",
+		"original": "img/original3.jpg"
+	}
+]

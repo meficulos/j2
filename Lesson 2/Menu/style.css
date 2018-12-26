@@ -1,0 +1,55 @@
+main {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+body {
+    font: 16px 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: gray;
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    color: red;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    background-color: white;
+}
+ul.submenu > li {
+    display: block;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    background-color: #FCDB1D;
+    text-decoration: none;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
